@@ -7,4 +7,16 @@ info:
 servers:
   - url: "http://localhost:8080"
   - url: "https://microcks-microcks.apps.cluster-ql6h5.ql6h5.sandbox1323.opentlc.com/rest/reviews/0.0.1"
-paths: {}
+paths: 
+  "/example":
+    get:
+      tags:
+      - example-controller
+      operationId: index
+      responses:
+        '200':
+          description: OK
+          content:
+            "*/*":
+              schema:
+                type: string
